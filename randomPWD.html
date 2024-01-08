@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='header'>
+        <h1><span class='noselect'>
+            > <span class='blinker'>_</span>
+        </span> Random Password Generator</h1>
+    </div>
+    
+    <select class='btn btn-default pw-select' id="pwTypeSelect">
+        <option value='0' selected disabled>Select password type</option>
+        <option value='alpha'>Alpha Numeric</option>
+        <option value='ascii'>ASCII</option>
+        <option value='hex'>Hexadecimal</option>
+    </select>
+    
+    <select class='btn btn-default pw-len' id="pwLenSelect">
+        <option value='0' selected disabled>Select length</option>
+        <option value='4'>4-chars</option>
+        <option value='6'>6 chars</option>
+        <option value='8'>8 chars</option>
+        <option value='10'>10 chars</option>
+        <option value='12'>12 chars</option>
+        <option value='14'>14 chars</option>
+        <option value='16'>16 chars</option>
+    </select>
+    
+    <button class='btn btn-success submit' onclick="generatePassword()">
+        Generate
+    </button>
+    
+    <h2 class='pw'>
+        <div id="passwordDisplay" class='password'>password</div>
+    </h2>
+    
+    <button class='btn btn-danger clip' onclick="copyToClipboard()">
+        Copy To Clipboard
+    </button>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
